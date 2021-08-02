@@ -95,7 +95,7 @@ const styles = StyleSheet.create({
   addNewApptBtn: {
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: 'green',
+    backgroundColor: '#86C127',
     marginVertical: 10,
     alignItems: 'center',
     justifyContent: 'center',

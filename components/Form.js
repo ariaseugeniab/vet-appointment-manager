@@ -150,7 +150,7 @@ const Form = ({appointment, setAppointment, setShowForm}) => {
 const styles = StyleSheet.create({
   form: {
     padding: 20,
-    backgroundColor: '#fff',
+    backgroundColor: '#F7F7F7',
     marginHorizontal: '2.5%',
   },
 
@@ -171,7 +171,7 @@ const styles = StyleSheet.create({
   saveDataBtn: {
     paddingVertical: 10,
     paddingHorizontal: 20,
-    backgroundColor: 'green',
+    backgroundColor: '#86C127',
     marginVertical: 10,
     alignItems: 'center',
     justifyContent: 'center',
