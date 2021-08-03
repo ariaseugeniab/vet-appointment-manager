@@ -13,9 +13,11 @@ import {
   View,
   FlatList,
   TouchableHighlight,
+  ImageStore,
 } from 'react-native';
 import Appointment from './components/Appointment';
 import Form from './components/Form';
+import ImageSelector from './components/ImageSelector';
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
@@ -59,18 +61,21 @@ const App = () => {
                 ? 'You have one appointment'
                 : 'You dont have any appointments'}
             </Text>
-
-            <FlatList
-              style={styles.list}
-              data={appointments}
-              renderItem={({item}) => (
-                <Appointment
-                  appointments={item}
-                  deletePatient={deletePatient}
-                />
-              )}
-              keyExtractor={appnt => appnt.id}
-            />
+            {appointments.length > 0 ? (
+              <FlatList
+                style={styles.list}
+                data={appointments}
+                renderItem={({item}) => (
+                  <Appointment
+                    appointments={item}
+                    deletePatient={deletePatient}
+                  />
+                )}
+                keyExtractor={appnt => appnt.id}
+              />
+            ) : (
+              <ImageSelector />
+            )}
           </>
         )}
       </View>
