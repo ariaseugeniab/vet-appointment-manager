@@ -13,11 +13,11 @@ import {
   View,
   FlatList,
   TouchableHighlight,
-  ImageStore,
 } from 'react-native';
 import Appointment from './components/Appointment';
 import Form from './components/Form';
 import ImageSelector from './components/ImageSelector';
+import CryptoCalculator from './components/CryptoCalculator';
 
 const App = () => {
   const [showForm, setShowForm] = useState(false);
@@ -74,7 +74,10 @@ const App = () => {
                 keyExtractor={appnt => appnt.id}
               />
             ) : (
-              <ImageSelector />
+              <View>
+                {/* <ImageSelector /> */}
+                <CryptoCalculator />
+              </View>
             )}
           </>
         )}
